@@ -1,0 +1,2194 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>EcoLumina | El Reino Verde</title>
+
+<style>
+
+/* =====================================================
+   ECOLUMINA — EL REINO VERDE
+   SITIO WEB COMPLETO
+===================================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:#f4f8ef;
+    color:#173b29;
+    line-height:1.6;
+}
+
+/* ================= NAVBAR ================= */
+
+.navbar{
+    position:sticky;
+    top:0;
+    z-index:999;
+    height:75px;
+    background:rgba(255,255,255,.96);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid #dfe9dc;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:0 6%;
+}
+
+.logo{
+    font-size:25px;
+    font-weight:900;
+    color:#173b29;
+}
+
+.logo span{
+    color:#3c985c;
+}
+
+.nav-links{
+    display:flex;
+    gap:25px;
+    list-style:none;
+}
+
+.nav-links a{
+    color:#476052;
+    text-decoration:none;
+    font-size:14px;
+    font-weight:600;
+    transition:.3s;
+}
+
+.nav-links a:hover{
+    color:#2c8b51;
+}
+
+.nav-button{
+    text-decoration:none;
+    background:#26784d;
+    color:white;
+    padding:11px 20px;
+    border-radius:30px;
+    font-size:13px;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.nav-button:hover{
+    background:#1d5a38;
+}
+
+/* ================= HERO ================= */
+
+.hero{
+    min-height:690px;
+    padding:90px 7%;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    align-items:center;
+    gap:70px;
+    background:
+        radial-gradient(circle at 85% 20%,#d7ebca 0,transparent 35%),
+        #f4f8ef;
+}
+
+.hero-label{
+    color:#39875a;
+    font-size:13px;
+    font-weight:bold;
+    letter-spacing:2px;
+    margin-bottom:20px;
+}
+
+.hero h1{
+    font-size:clamp(48px,7vw,82px);
+    line-height:1;
+    margin-bottom:25px;
+}
+
+.hero h1 span{
+    color:#3e9d60;
+}
+
+.hero-description{
+    max-width:600px;
+    color:#607368;
+    font-size:17px;
+    line-height:1.8;
+}
+
+.hero-buttons{
+    display:flex;
+    gap:15px;
+    margin-top:35px;
+}
+
+.button{
+    display:inline-block;
+    text-decoration:none;
+    padding:15px 25px;
+    border-radius:30px;
+    font-weight:bold;
+    font-size:14px;
+    transition:.3s;
+    border:none;
+    cursor:pointer;
+}
+
+.button:hover{
+    transform:translateY(-3px);
+}
+
+.primary{
+    background:#26784d;
+    color:white;
+}
+
+.primary:hover{
+    background:#1d5a38;
+}
+
+.secondary{
+    background:white;
+    color:#26784d;
+    border:1px solid #c9daca;
+}
+
+.secondary:hover{
+    background:#f0f5ed;
+}
+
+/* HERO VISUAL */
+
+.hero-visual{
+    min-height:470px;
+    border-radius:35px;
+    background:linear-gradient(145deg,#dcebd3,#edf5e8);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    position:relative;
+    overflow:hidden;
+    box-shadow:0 25px 60px rgba(25,65,39,.12);
+}
+
+.hero-earth{
+    width:250px;
+    height:250px;
+    border-radius:50%;
+    background:#5ca96b;
+    border:12px solid white;
+    box-shadow:0 20px 50px rgba(20,70,40,.2);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:115px;
+    position:relative;
+    z-index:2;
+}
+
+.leaf{
+    position:absolute;
+    font-size:50px;
+    opacity:.8;
+}
+
+.leaf1{top:45px;left:60px;}
+.leaf2{top:80px;right:70px;}
+.leaf3{bottom:65px;left:80px;}
+.leaf4{bottom:50px;right:55px;}
+
+.hero-message{
+    position:absolute;
+    bottom:25px;
+    background:white;
+    padding:15px 25px;
+    border-radius:18px;
+    box-shadow:0 10px 30px rgba(0,0,0,.1);
+    font-size:13px;
+    font-weight:bold;
+}
+
+/* ================= GENERAL ================= */
+
+.section{
+    padding:110px 7%;
+}
+
+.section-number{
+    color:#76a879;
+    font-size:13px;
+    font-weight:bold;
+    letter-spacing:2px;
+}
+
+.section-title{
+    margin:10px 0 55px;
+}
+
+.section-title small{
+    color:#39875a;
+    font-weight:bold;
+    letter-spacing:2px;
+}
+
+.section-title h2{
+    font-size:clamp(38px,5vw,60px);
+    line-height:1.08;
+    margin-top:12px;
+}
+
+.section-title p{
+    color:#708078;
+    margin-top:15px;
+}
+
+/* ================= INTRODUCCIÓN ================= */
+
+.introduction{
+    background:white;
+}
+
+.intro-grid{
+    display:grid;
+    grid-template-columns:1.2fr .8fr;
+    gap:70px;
+    align-items:start;
+}
+
+.text-content{
+    color:#596c61;
+    font-size:16px;
+}
+
+.text-content p{
+    margin-bottom:22px;
+}
+
+.text-content strong{
+    color:#245b3d;
+}
+
+.quote{
+    margin-top:30px;
+    border-left:5px solid #4d9b62;
+    background:#edf5e8;
+    padding:22px 25px;
+    border-radius:0 15px 15px 0;
+    color:#285b3d;
+    font-weight:bold;
+}
+
+.info-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:15px;
+}
+
+.info-card{
+    background:#f2f6ed;
+    padding:25px;
+    border-radius:20px;
+    border:1px solid #e1eadc;
+}
+
+.info-card .emoji{
+    font-size:30px;
+}
+
+.info-card h3{
+    margin-top:8px;
+}
+
+.info-card p{
+    color:#708078;
+    font-size:13px;
+}
+
+/* ================= HISTORIA ================= */
+
+.story{
+    background:linear-gradient(135deg,#123b27,#28734b);
+    color:white;
+    padding:120px 7%;
+}
+
+.story-container{
+    max-width:900px;
+}
+
+.story-label{
+    color:#9ed19f;
+    font-weight:bold;
+    letter-spacing:2px;
+    font-size:13px;
+    margin-top:10px;
+}
+
+.story h2{
+    font-size:clamp(42px,6vw,68px);
+    line-height:1.05;
+    margin:15px 0 35px;
+}
+
+.story p{
+    color:#d4e5d6;
+    margin-bottom:20px;
+    font-size:16px;
+}
+
+.mission{
+    margin-top:35px;
+    padding:25px;
+    border-radius:20px;
+    background:rgba(255,255,255,.1);
+    border:1px solid rgba(255,255,255,.15);
+    display:flex;
+    gap:20px;
+    align-items:center;
+}
+
+.mission-icon{
+    font-size:40px;
+}
+
+.mission strong{
+    color:#b2ddb3;
+}
+
+/* ================= OBJETIVO ================= */
+
+.objective{
+    padding:90px 7%;
+    background:#e3efdc;
+}
+
+.objective-content{
+    max-width:1000px;
+    margin:auto;
+    text-align:center;
+}
+
+.objective h2{
+    font-size:45px;
+    margin-bottom:20px;
+}
+
+.objective p{
+    color:#607267;
+    max-width:750px;
+    margin:auto;
+}
+
+/* ================= JUGABILIDAD ================= */
+
+.steps{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:20px;
+}
+
+.step{
+    background:white;
+    padding:30px;
+    border-radius:22px;
+    border:1px solid #e2e9df;
+    display:flex;
+    gap:20px;
+    transition:.3s;
+}
+
+.step:hover{
+    transform:translateY(-5px);
+    box-shadow:0 15px 35px rgba(30,65,40,.08);
+}
+
+.step-number{
+    min-width:50px;
+    height:50px;
+    border-radius:50%;
+    background:#dcebd5;
+    color:#28764c;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-weight:900;
+}
+
+.step h3{
+    margin-bottom:8px;
+}
+
+.step p{
+    color:#69796f;
+    font-size:14px;
+}
+
+/* ================= MINI GAME ================= */
+
+.play-area{
+    margin-top:65px;
+    padding:40px;
+    background:#173d29;
+    border-radius:28px;
+    color:white;
+    display:grid;
+    grid-template-columns:.7fr 1.3fr;
+    gap:40px;
+    align-items:center;
+}
+
+.score-title{
+    color:#a4d3a4;
+    font-size:12px;
+    letter-spacing:2px;
+    font-weight:bold;
+}
+
+.score{
+    font-size:65px;
+    font-weight:900;
+    color:#9ed49f;
+}
+
+.play-area h3{
+    font-size:25px;
+    margin-bottom:10px;
+}
+
+.play-area p{
+    color:#c5d8c7;
+}
+
+.eco-button{
+    margin-top:20px;
+    border:0;
+    background:#67ad70;
+    color:white;
+    padding:15px 24px;
+    border-radius:30px;
+    font-weight:bold;
+    cursor:pointer;
+    font-family:inherit;
+    transition:.3s;
+}
+
+.eco-button:hover{
+    background:#79bb80;
+    transform:scale(1.05);
+}
+
+.game-message{
+    margin-top:15px;
+    font-size:13px;
+}
+
+/* ================= COMPONENTES ================= */
+
+.components{
+    background:#eef4e9;
+}
+
+.component-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
+
+.component{
+    background:white;
+    border-radius:22px;
+    padding:30px;
+    border:1px solid #e1e9dd;
+    transition:.3s;
+}
+
+.component:hover{
+    transform:translateY(-6px);
+    box-shadow:0 15px 35px rgba(25,65,40,.08);
+}
+
+.component-icon{
+    font-size:50px;
+    margin-bottom:15px;
+}
+
+.component h3{
+    margin-bottom:8px;
+}
+
+.component p{
+    color:#68786e;
+    font-size:14px;
+}
+
+/* ================= ECOSISTEMAS ================= */
+
+.ecosystems{
+    padding:110px 7%;
+    background:white;
+}
+
+.ecosystem-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:18px;
+}
+
+.ecosystem{
+    min-height:300px;
+    border-radius:25px;
+    padding:30px;
+    display:flex;
+    flex-direction:column;
+    justify-content:flex-end;
+    transition:.3s;
+}
+
+.ecosystem:hover{
+    transform:translateY(-7px);
+}
+
+.ecosystem-icon{
+    font-size:60px;
+    margin-bottom:auto;
+}
+
+.ecosystem h3{
+    font-size:25px;
+}
+
+.ecosystem p{
+    color:#607066;
+    font-size:13px;
+}
+
+.forest{background:#dcebd5;}
+.river{background:#dcecef;}
+.city{background:#ebe6da;}
+.ocean{background:#d8e8ef;}
+
+/* ================= TARJETAS ================= */
+
+.cards-section{
+    padding:110px 7%;
+    background:#f4f8ef;
+}
+
+.cards-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
+}
+
+.game-card{
+    min-height:300px;
+    padding:30px;
+    border-radius:25px;
+    color:white;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+    box-shadow:0 15px 35px rgba(0,0,0,.1);
+}
+
+.challenge{
+    background:linear-gradient(145deg,#26784d,#3e9c60);
+}
+
+.action{
+    background:linear-gradient(145deg,#d79531,#e5ae52);
+}
+
+.trivia{
+    background:linear-gradient(145deg,#425d91,#667fb2);
+}
+
+.card-symbol{
+    font-size:55px;
+}
+
+.game-card h3{
+    font-size:25px;
+}
+
+.game-card p{
+    color:rgba(255,255,255,.9);
+    font-size:14px;
+}
+
+/* ================= REGLAS ================= */
+
+.rules{
+    padding:110px 7%;
+    background:#e7f0e1;
+}
+
+.rules-list{
+    max-width:900px;
+    margin:auto;
+    display:grid;
+    gap:15px;
+}
+
+.rule{
+    background:white;
+    padding:20px 25px;
+    border-radius:16px;
+    display:flex;
+    gap:15px;
+    align-items:flex-start;
+}
+
+.rule-number{
+    width:35px;
+    height:35px;
+    flex-shrink:0;
+    border-radius:50%;
+    background:#dcebd5;
+    color:#26784d;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-weight:bold;
+}
+
+.rule p{
+    color:#627168;
+    font-size:14px;
+}
+
+/* ================= PROYECTO ================= */
+
+.project{
+    padding:110px 7%;
+    background:#173d29;
+    color:white;
+}
+
+.project-intro{
+    max-width:750px;
+    margin-bottom:55px;
+}
+
+.project-intro small{
+    color:#9ed19f;
+    font-weight:bold;
+    letter-spacing:2px;
+}
+
+.project-intro h2{
+    font-size:clamp(40px,5vw,60px);
+    line-height:1.08;
+    margin:15px 0 20px;
+}
+
+.project-intro p{
+    color:#c9ddcb;
+}
+
+.project-grid{
+    display:grid;
+    grid-template-columns:repeat(5,1fr);
+    gap:15px;
+}
+
+.project-card{
+    padding:25px;
+    border-radius:20px;
+    background:rgba(255,255,255,.08);
+    border:1px solid rgba(255,255,255,.1);
+}
+
+.project-card .icon{
+    font-size:35px;
+}
+
+.project-card h3{
+    margin:12px 0 8px;
+    font-size:17px;
+}
+
+.project-card p{
+    color:#c4d6c6;
+    font-size:12px;
+}
+
+/* ================= BOCETO ================= */
+
+.sketch{
+    padding:110px 7%;
+    background:white;
+}
+
+.website-sketch{
+    max-width:1100px;
+    margin:auto;
+    border:2px solid #b9cbb7;
+    border-radius:25px;
+    overflow:hidden;
+    box-shadow:0 20px 50px rgba(30,70,40,.1);
+}
+
+.sketch-top{
+    height:55px;
+    background:#e6eee1;
+    display:flex;
+    align-items:center;
+    gap:8px;
+    padding:0 20px;
+}
+
+.dot{
+    width:11px;
+    height:11px;
+    border-radius:50%;
+    background:#9caf9d;
+}
+
+.sketch-navbar{
+    padding:18px 25px;
+    display:flex;
+    justify-content:space-between;
+    border-bottom:1px solid #dbe4d8;
+    font-weight:bold;
+}
+
+.sketch-nav{
+    display:flex;
+    gap:20px;
+    font-size:11px;
+    color:#657468;
+}
+
+.sketch-hero{
+    padding:50px;
+    background:#edf4e9;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:30px;
+    align-items:center;
+}
+
+.sketch-hero h3{
+    font-size:35px;
+    line-height:1.1;
+}
+
+.sketch-visual{
+    height:200px;
+    border:2px dashed #9caf9d;
+    border-radius:20px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:70px;
+}
+
+.sketch-blocks{
+    padding:30px;
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:15px;
+}
+
+.sketch-block{
+    height:100px;
+    border:2px dashed #b7c8b5;
+    border-radius:15px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    font-size:13px;
+    color:#627067;
+}
+
+/* ================= MENSAJE FINAL ================= */
+
+.final{
+    padding:120px 7%;
+    text-align:center;
+    background:
+        radial-gradient(circle,#dcebd5,transparent 45%),
+        #f4f8ef;
+}
+
+.final h2{
+    font-size:clamp(40px,6vw,70px);
+    line-height:1;
+}
+
+.final h2 span{
+    color:#3c985c;
+}
+
+.final p{
+    max-width:650px;
+    margin:25px auto;
+    color:#66756c;
+}
+
+/* ================= FOOTER ================= */
+
+footer{
+    background:#102b1d;
+    color:white;
+    text-align:center;
+    padding:60px 7%;
+}
+
+.footer-logo{
+    font-size:28px;
+    font-weight:900;
+}
+
+.footer-logo span{
+    color:#77b879;
+}
+
+footer p{
+    color:#9eb3a1;
+    font-size:13px;
+    margin-top:7px;
+}
+
+.footer-line{
+    max-width:500px;
+    height:1px;
+    background:rgba(255,255,255,.15);
+    margin:25px auto;
+}
+
+footer strong{
+    color:#9bd19c;
+    font-size:13px;
+}
+
+
+/* ================= RESPONSIVE ================= */
+
+@media(max-width:950px){
+
+    .nav-links{
+        display:none;
+    }
+
+    .hero{
+        grid-template-columns:1fr;
+    }
+
+    .intro-grid{
+        grid-template-columns:1fr;
+    }
+
+    .component-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .ecosystem-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .project-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .play-area{
+        grid-template-columns:1fr;
+    }
+
+}
+
+@media(max-width:650px){
+
+    .navbar{
+        padding:0 5%;
+    }
+
+    .nav-button{
+        display:none;
+    }
+
+    .hero,
+    .section,
+    .story,
+    .components,
+    .ecosystems,
+    .cards-section,
+    .rules,
+    .project,
+    .sketch,
+    .final{
+        padding-left:5%;
+        padding-right:5%;
+    }
+
+    .hero{
+        padding-top:60px;
+    }
+
+    .hero-buttons{
+        flex-direction:column;
+    }
+
+    .button{
+        text-align:center;
+    }
+
+    .info-grid,
+    .steps,
+    .component-grid,
+    .ecosystem-grid,
+    .cards-grid,
+    .project-grid,
+    .sketch-blocks{
+        grid-template-columns:1fr;
+    }
+
+    .sketch-hero{
+        grid-template-columns:1fr;
+        padding:30px;
+    }
+
+    .sketch-navbar{
+        display:none;
+    }
+
+    .hero-visual{
+        min-height:380px;
+    }
+
+    .hero-earth{
+        width:190px;
+        height:190px;
+        font-size:80px;
+    }
+
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     MENÚ
+===================================================== -->
+
+<header class="navbar">
+
+    <div class="logo">
+        🌿 Eco<span>Lumina</span>
+    </div>
+
+    <ul class="nav-links">
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#introduccion">Introducción</a></li>
+        <li><a href="#historia">Historia</a></li>
+        <li><a href="#jugabilidad">Jugabilidad</a></li>
+        <li><a href="#componentes">Componentes</a></li>
+        <li><a href="#proyecto">Proyecto</a></li>
+    </ul>
+
+    <a class="nav-button" href="#jugar">
+        🎲 Jugar
+    </a>
+
+</header>
+
+
+<!-- =====================================================
+     HERO
+===================================================== -->
+
+<section class="hero" id="inicio">
+
+    <div>
+
+        <div class="hero-label">
+            🌎 JUEGO DE MESA EDUCATIVO Y ECOLÓGICO
+        </div>
+
+        <h1>
+            EcoLumina
+            <br>
+            <span>El Reino Verde</span>
+        </h1>
+
+        <p class="hero-description">
+            Una aventura de mesa donde la creatividad, la estrategia
+            y el trabajo en equipo se unen para proteger el planeta.
+            Recorre ecosistemas, supera desafíos y consigue puntos
+            verdes para restaurar el equilibrio de la Tierra.
+        </p>
+
+        <div class="hero-buttons">
+
+            <a href="#introduccion" class="button primary">
+                🌱 Conocer el juego
+            </a>
+
+            <a href="#jugabilidad" class="button secondary">
+                🎲 Ver cómo jugar
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <div class="hero-visual">
+
+        <div class="leaf leaf1">🍃</div>
+        <div class="leaf leaf2">🌿</div>
+        <div class="leaf leaf3">🍃</div>
+        <div class="leaf leaf4">🌱</div>
+
+        <div class="hero-earth">
+            🌎
+        </div>
+
+        <div class="hero-message">
+            ♻️ Pequeñas acciones, grandes cambios.
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     INTRODUCCIÓN
+===================================================== -->
+
+<section class="section introduction" id="introduccion">
+
+    <div class="section-number">
+        01 — INTRODUCCIÓN
+    </div>
+
+    <div class="section-title">
+
+        <small>CONOCE ECOLUMINA</small>
+
+        <h2>
+            Un juego donde<br>
+            cada decisión importa.
+        </h2>
+
+    </div>
+
+
+    <div class="intro-grid">
+
+        <div class="text-content">
+
+            <p>
+                <strong>EcoLumina: El Reino Verde</strong> es un juego
+                de mesa educativo creado para promover la protección
+                del medio ambiente y enseñar sobre sostenibilidad
+                de una manera entretenida.
+            </p>
+
+            <p>
+                El juego combina creatividad, planificación, diseño,
+                tecnología y trabajo colaborativo. Los participantes
+                deberán recorrer diferentes ecosistemas, enfrentarse
+                a problemas ambientales y tomar decisiones que
+                pueden ayudar o perjudicar al planeta.
+            </p>
+
+            <p>
+                El objetivo no consiste solamente en ganar de forma
+                individual. Los jugadores deberán colaborar para
+                conseguir suficientes puntos verdes y restaurar
+                los ecosistemas antes de que la contaminación
+                alcance un nivel crítico.
+            </p>
+
+            <div class="quote">
+                🌱 "Cuidar el planeta comienza con las decisiones
+                que tomamos todos los días."
+            </div>
+
+        </div>
+
+
+        <div class="info-grid">
+
+            <div class="info-card">
+                <div class="emoji">👥</div>
+                <h3>Jugadores</h3>
+                <p>De 2 a 4 participantes.</p>
+            </div>
+
+            <div class="info-card">
+                <div class="emoji">⏱️</div>
+                <h3>Duración</h3>
+                <p>Entre 30 y 45 minutos.</p>
+            </div>
+
+            <div class="info-card">
+                <div class="emoji">🌱</div>
+                <h3>Edad</h3>
+                <p>Recomendado desde los 10 años.</p>
+            </div>
+
+            <div class="info-card">
+                <div class="emoji">🤝</div>
+                <h3>Modalidad</h3>
+                <p>Juego cooperativo.</p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     HISTORIA
+===================================================== -->
+
+<section class="story" id="historia">
+
+    <div class="story-container">
+
+        <div class="section-number">
+            02 — HISTORIA
+        </div>
+
+        <div class="story-label">
+            EL REINO VERDE
+        </div>
+
+        <h2>
+            El planeta<br>
+            necesita guardianes.
+        </h2>
+
+        <p>
+            En un futuro cercano, la Tierra comienza a perder
+            su equilibrio. La contaminación, la deforestación,
+            el desperdicio de agua y el consumo excesivo de
+            recursos están afectando a los ecosistemas.
+        </p>
+
+        <p>
+            Muchos bosques están desapareciendo, los ríos se
+            encuentran contaminados y los océanos reciben cada
+            vez más residuos.
+        </p>
+
+        <p>
+            Ante esta situación aparece el <strong>Consejo Verde</strong>,
+            una organización encargada de encontrar nuevos
+            guardianes capaces de ayudar al planeta.
+        </p>
+
+        <p>
+            Los jugadores se convierten en esos guardianes.
+            Durante la aventura deberán recorrer el Reino Verde,
+            solucionar problemas ambientales, utilizar recursos
+            correctamente y tomar decisiones responsables.
+        </p>
+
+
+        <div class="mission">
+
+            <div class="mission-icon">
+                🌎
+            </div>
+
+            <div>
+
+                <strong>LA MISIÓN</strong>
+
+                <p>
+                    Restaurar los ecosistemas y conseguir suficientes
+                    puntos verdes antes de que el planeta llegue
+                    a un estado crítico.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     OBJETIVO
+===================================================== -->
+
+<section class="objective">
+
+    <div class="objective-content">
+
+        <h2>
+            🎯 Objetivo del juego
+        </h2>
+
+        <p>
+            Los jugadores deben colaborar para proteger los
+            ecosistemas, completar desafíos ambientales,
+            administrar recursos y acumular puntos verdes.
+            Si logran restaurar todos los ecosistemas antes
+            de que aumente demasiado la contaminación,
+            ¡todos ganan!
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     JUGABILIDAD
+===================================================== -->
+
+<section class="section" id="jugabilidad">
+
+    <div class="section-number">
+        03 — JUGABILIDAD
+    </div>
+
+    <div class="section-title">
+
+        <small>¿CÓMO SE JUEGA?</small>
+
+        <h2>
+            Una partida,<br>
+            seis pasos.
+        </h2>
+
+        <p>
+            Cada turno representa una nueva oportunidad
+            para ayudar al planeta.
+        </p>
+
+    </div>
+
+
+    <div class="steps">
+
+        <div class="step">
+
+            <div class="step-number">1</div>
+
+            <div>
+                <h3>Elige tu guardián</h3>
+
+                <p>
+                    Cada participante escoge uno de los personajes
+                    disponibles. Cada guardián tiene una habilidad
+                    especial relacionada con el medio ambiente.
+                </p>
+            </div>
+
+        </div>
+
+
+        <div class="step">
+
+            <div class="step-number">2</div>
+
+            <div>
+                <h3>Lanza el dado</h3>
+
+                <p>
+                    Lanza el dado y mueve tu ficha por las
+                    diferentes zonas del tablero.
+                </p>
+            </div>
+
+        </div>
+
+
+        <div class="step">
+
+            <div class="step-number">3</div>
+
+            <div>
+                <h3>Observa la casilla</h3>
+
+                <p>
+                    Dependiendo del lugar donde caigas tendrás
+                    que realizar una acción o tomar una tarjeta.
+                </p>
+            </div>
+
+        </div>
+
+
+        <div class="step">
+
+            <div class="step-number">4</div>
+
+            <div>
+                <h3>Resuelve el desafío</h3>
+
+                <p>
+                    Responde una pregunta, completa una acción
+                    ecológica o supera un reto relacionado con
+                    la protección ambiental.
+                </p>
+            </div>
+
+        </div>
+
+
+        <div class="step">
+
+            <div class="step-number">5</div>
+
+            <div>
+                <h3>Obtén recursos</h3>
+
+                <p>
+                    Consigue recursos como agua, energía y
+                    biodiversidad para ayudar a recuperar
+                    los ecosistemas.
+                </p>
+            </div>
+
+        </div>
+
+
+        <div class="step">
+
+            <div class="step-number">6</div>
+
+            <div>
+                <h3>Gana puntos verdes</h3>
+
+                <p>
+                    Las decisiones positivas otorgan puntos.
+                    El equipo debe alcanzar la cantidad necesaria
+                    para restaurar el Reino Verde.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- MINI JUEGO INTERACTIVO -->
+
+    <div class="play-area" id="jugar">
+
+        <div>
+
+            <div class="score-title">
+                PUNTOS VERDES
+            </div>
+
+            <div class="score" id="score">
+                0
+            </div>
+
+        </div>
+
+
+        <div>
+
+            <h3>
+                ¡Prueba una acción ecológica!
+            </h3>
+
+            <p>
+                Haz clic en el botón para realizar una acción
+                positiva y conseguir puntos verdes.
+            </p>
+
+            <button class="eco-button" onclick="addPoint()">
+                🌱 Realizar acción ecológica
+            </button>
+
+            <div class="game-message" id="gameMessage">
+                ¡Comienza a proteger el planeta!
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     COMPONENTES
+===================================================== -->
+
+<section class="components" id="componentes">
+
+    <div class="section-number">
+        04 — COMPONENTES
+    </div>
+
+    <div class="section-title">
+
+        <small>¿QUÉ CONTIENE?</small>
+
+        <h2>
+            Todo lo necesario<br>
+            para jugar.
+        </h2>
+
+    </div>
+
+
+    <div class="component-grid">
+
+        <div class="component">
+
+            <div class="component-icon">
+                🗺️
+            </div>
+
+            <h3>
+                Tablero
+            </h3>
+
+            <p>
+                Representa los diferentes ecosistemas que
+                los jugadores deben proteger y restaurar.
+            </p>
+
+        </div>
+
+
+        <div class="component">
+
+            <div class="component-icon">
+                🧍
+            </div>
+
+            <h3>
+                Fichas de guardianes
+            </h3>
+
+            <p>
+                Representan a los jugadores y sus habilidades
+                especiales para ayudar al planeta.
+            </p>
+
+        </div>
+
+
+        <div class="component">
+
+            <div class="component-icon">
+                🃏
+            </div>
+
+            <h3>
+                Tarjetas
+            </h3>
+
+            <p>
+                Existen tarjetas de desafío, acción y trivia
+                con diferentes situaciones ambientales.
+            </p>
+
+        </div>
+
+
+        <div class="component">
+
+            <div class="component-icon">
+                💧
+            </div>
+
+            <h3>
+                Recursos
+            </h3>
+
+            <p>
+                Fichas que representan agua, energía,
+                biodiversidad y otros recursos.
+            </p>
+
+        </div>
+
+
+        <div class="component">
+
+            <div class="component-icon">
+                🎲
+            </div>
+
+            <h3>
+                Dado
+            </h3>
+
+            <p>
+                Determina cuántos espacios puede avanzar
+                cada jugador durante su turno.
+            </p>
+
+        </div>
+
+
+        <div class="component">
+
+            <div class="component-icon">
+                🌱
+            </div>
+
+            <h3>
+                Puntos verdes
+            </h3>
+
+            <p>
+                Se consiguen mediante decisiones y acciones
+                que benefician al medio ambiente.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     ECOSISTEMAS
+===================================================== -->
+
+<section class="ecosystems">
+
+    <div class="section-title" style="text-align:center;">
+
+        <small>
+            05 — ECOSISTEMAS
+        </small>
+
+        <h2>
+            Explora el Reino Verde.
+        </h2>
+
+        <p>
+            Cada ecosistema presenta problemas diferentes.
+        </p>
+
+    </div>
+
+
+    <div class="ecosystem-grid">
+
+        <div class="ecosystem forest">
+
+            <div class="ecosystem-icon">
+                🌲
+            </div>
+
+            <h3>
+                Bosque
+            </h3>
+
+            <p>
+                Protege los árboles y la biodiversidad.
+            </p>
+
+        </div>
+
+
+        <div class="ecosystem river">
+
+            <div class="ecosystem-icon">
+                💧
+            </div>
+
+            <h3>
+                Río
+            </h3>
+
+            <p>
+                Evita la contaminación y protege el agua.
+            </p>
+
+        </div>
+
+
+        <div class="ecosystem city">
+
+            <div class="ecosystem-icon">
+                🏙️
+            </div>
+
+            <h3>
+                Ciudad
+            </h3>
+
+            <p>
+                Promueve el ahorro de energía y recursos.
+            </p>
+
+        </div>
+
+
+        <div class="ecosystem ocean">
+
+            <div class="ecosystem-icon">
+                🌊
+            </div>
+
+            <h3>
+                Océano
+            </h3>
+
+            <p>
+                Protege la vida marina y reduce los residuos.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     TARJETAS
+===================================================== -->
+
+<section class="cards-section">
+
+    <div class="section-title">
+
+        <small>
+            06 — TARJETAS
+        </small>
+
+        <h2>
+            Tres tipos de desafíos.
+        </h2>
+
+    </div>
+
+
+    <div class="cards-grid">
+
+        <div class="game-card challenge">
+
+            <div class="card-symbol">
+                🌿
+            </div>
+
+            <div>
+
+                <h3>
+                    Desafío ambiental
+                </h3>
+
+                <p>
+                    Resuelve un problema relacionado con
+                    contaminación, reciclaje, agua,
+                    energía o biodiversidad.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="game-card action">
+
+            <div class="card-symbol">
+                ♻️
+            </div>
+
+            <div>
+
+                <h3>
+                    Acción
+                </h3>
+
+                <p>
+                    Realiza una acción positiva para conseguir
+                    puntos verdes y ayudar al ecosistema.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="game-card trivia">
+
+            <div class="card-symbol">
+                ❓
+            </div>
+
+            <div>
+
+                <h3>
+                    Trivia
+                </h3>
+
+                <p>
+                    Responde correctamente una pregunta sobre
+                    el medio ambiente para obtener recompensas.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     REGLAS
+===================================================== -->
+
+<section class="rules">
+
+    <div class="section-title" style="text-align:center;">
+
+        <small>
+            07 — REGLAS
+        </small>
+
+        <h2>
+            Reglas principales.
+        </h2>
+
+    </div>
+
+
+    <div class="rules-list">
+
+        <div class="rule">
+
+            <div class="rule-number">1</div>
+
+            <p>
+                Todos los jugadores comienzan con una cantidad
+                determinada de recursos.
+            </p>
+
+        </div>
+
+
+        <div class="rule">
+
+            <div class="rule-number">2</div>
+
+            <p>
+                Cada jugador lanza el dado una vez durante
+                su turno y avanza por el tablero.
+            </p>
+
+        </div>
+
+
+        <div class="rule">
+
+            <div class="rule-number">3</div>
+
+            <p>
+                Las tarjetas deben resolverse antes de
+                finalizar el turno.
+            </p>
+
+        </div>
+
+
+        <div class="rule">
+
+            <div class="rule-number">4</div>
+
+            <p>
+                Las acciones positivas permiten conseguir
+                puntos verdes.
+            </p>
+
+        </div>
+
+
+        <div class="rule">
+
+            <div class="rule-number">5</div>
+
+            <p>
+                Las decisiones negativas pueden aumentar
+                el nivel de contaminación.
+            </p>
+
+        </div>
+
+
+        <div class="rule">
+
+            <div class="rule-number">6</div>
+
+            <p>
+                El equipo gana cuando consigue restaurar
+                todos los ecosistemas.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     PROYECTO
+===================================================== -->
+
+<section class="project" id="proyecto">
+
+    <div class="project-intro">
+
+        <small>
+            08 — PROYECTO
+        </small>
+
+        <h2>
+            Creatividad que se
+            convierte en acción.
+        </h2>
+
+        <p>
+            EcoLumina integra diferentes habilidades para
+            desarrollar un proyecto relacionado con la
+            protección del medio ambiente.
+        </p>
+
+    </div>
+
+
+    <div class="project-grid">
+
+        <div class="project-card">
+
+            <div class="icon">
+                🎨
+            </div>
+
+            <h3>
+                Creatividad
+            </h3>
+
+            <p>
+                Creación del concepto, historia, personajes
+                y desafíos del juego.
+            </p>
+
+        </div>
+
+
+        <div class="project-card">
+
+            <div class="icon">
+                📋
+            </div>
+
+            <h3>
+                Planificación
+            </h3>
+
+            <p>
+                Organización de reglas, materiales,
+                objetivos y etapas.
+            </p>
+
+        </div>
+
+
+        <div class="project-card">
+
+            <div class="icon">
+                ✏️
+            </div>
+
+            <h3>
+                Diseño
+            </h3>
+
+            <p>
+                Desarrollo visual del tablero, tarjetas,
+                fichas e identidad del juego.
+            </p>
+
+        </div>
+
+
+        <div class="project-card">
+
+            <div class="icon">
+                💻
+            </div>
+
+            <h3>
+                Tecnología
+            </h3>
+
+            <p>
+                Creación de este sitio web utilizando
+                HTML, CSS y JavaScript.
+            </p>
+
+        </div>
+
+
+        <div class="project-card">
+
+            <div class="icon">
+                🤝
+            </div>
+
+            <h3>
+                Trabajo colaborativo
+            </h3>
+
+            <p>
+                Distribución de tareas, intercambio de ideas
+                y colaboración entre los integrantes.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     BOCETO DEL SITIO WEB
+===================================================== -->
+
+<section class="sketch">
+
+    <div class="section-title" style="text-align:center;">
+
+        <small>
+            09 — BOCETO DEL SITIO WEB
+        </small>
+
+        <h2>
+            Diseño de la página.
+        </h2>
+
+        <p>
+            Esta es la estructura visual utilizada para organizar
+            el contenido del proyecto.
+        </p>
+
+    </div>
+
+
+    <div class="website-sketch">
+
+        <div class="sketch-top">
+
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+
+        </div>
+
+
+        <div class="sketch-navbar">
+
+            <div>
+                🌿 EcoLumina
+            </div>
+
+            <div class="sketch-nav">
+
+                <span>Inicio</span>
+                <span>Historia</span>
+                <span>Juego</span>
+                <span>Componentes</span>
+                <span>Proyecto</span>
+
+            </div>
+
+        </div>
+
+
+        <div class="sketch-hero">
+
+            <div>
+
+                <h3>
+                    Juega, aprende
+                    y protege
+                    el planeta.
+                </h3>
+
+                <p style="margin-top:15px;color:#68776d;">
+                    Presentación del juego ecológico.
+                </p>
+
+            </div>
+
+
+            <div class="sketch-visual">
+                🌎
+            </div>
+
+        </div>
+
+
+        <div class="sketch-blocks">
+
+            <div class="sketch-block">
+                INTRODUCCIÓN
+            </div>
+
+            <div class="sketch-block">
+                HISTORIA
+            </div>
+
+            <div class="sketch-block">
+                JUGABILIDAD
+            </div>
+
+            <div class="sketch-block">
+                COMPONENTES
+            </div>
+
+            <div class="sketch-block">
+                ECOSISTEMAS
+            </div>
+
+            <div class="sketch-block">
+                PROYECTO
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     FINAL
+===================================================== -->
+
+<section class="final">
+
+    <h2>
+        El planeta es nuestro
+        <span>mejor equipo.</span>
+    </h2>
+
+    <p>
+        EcoLumina demuestra que aprender sobre el medio ambiente
+        también puede ser divertido. Cada decisión cuenta y,
+        trabajando juntos, podemos generar grandes cambios.
+    </p>
+
+    <a href="#inicio" class="button primary">
+        🌱 Volver al inicio
+    </a>
+
+</section>
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer>
+
+    <div class="footer-logo">
+        🌿 Eco<span>Lumina</span>
+    </div>
+
+    <p>
+        El Reino Verde
+    </p>
+
+    <p>
+        Juego de mesa educativo sobre protección del medio ambiente
+    </p>
+
+    <div class="footer-line"></div>
+
+    <strong>
+        🌎 Pequeñas acciones, grandes cambios.
+    </strong>
+
+</footer>
+
+
+<!-- =====================================================
+     JAVASCRIPT
+===================================================== -->
+
+<script>
+
+let score = 0;
+
+const messages = [
+
+    "🌱 ¡Excelente! Realizaste una acción positiva.",
+
+    "🌳 ¡Muy bien! Un ecosistema está más protegido.",
+
+    "💧 ¡Genial! Ayudaste a cuidar un recurso natural.",
+
+    "♻️ ¡Gran decisión! El planeta lo agradece.",
+
+    "🦋 ¡Excelente! La biodiversidad está más segura.",
+
+    "🌎 ¡Sigue así! Cada acción cuenta."
+
+];
+
+
+function addPoint(){
+
+    score += 10;
+
+    document.getElementById("score").textContent = score;
+
+    let random =
+        Math.floor(Math.random() * messages.length);
+
+    document.getElementById("gameMessage").textContent =
+        messages[random];
+
+
+    if(score >= 100){
+
+        document.getElementById("gameMessage").textContent =
+            "🏆 ¡GANASTE! ¡Has conseguido 100 puntos verdes y ayudaste a restaurar el Reino Verde! 🌎";
+
+    }
+
+}
+
+</script>
+
+
+</body>
+</html>
